@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Table} from 'react-bootstrap';
 import react from 'react'
+import propTypes from 'prop-types';
 import {Card,Button} from 'react-bootstrap'
 const profile = ({Listprof,children,displayname}) => {
   return (
@@ -22,4 +23,14 @@ const profile = ({Listprof,children,displayname}) => {
     </div>
   )
 }
+profile.propTypes = {
+    Listprof: propTypes.object,
+    displayname: propTypes.func
+  }
+  profile.defaultProps = {
+    Listprof:[{fullName:"aaaa",
+    bio:"Je suis foulen ben flan, développeur web Je suis sérieux, dynamique et je m’adapte facilement dans le groupe de travail",
+    profession:"Developpeur web"
+  }]
+  }
 export default profile
